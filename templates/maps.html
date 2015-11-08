@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Chicago Taxi trips visualization</title>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mapstyle.css') }}">
+
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAL-i8Ridf0tibzpzu-YsPR13sLIg5QbHA&libraries=drawing&sensor=false">
+		</script>
+		<script type="text/javascript" src="{{ url_for('static', filename='plot.js') }}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='jquery-2.1.0.min.js') }}"></script>
+	</head>
+	<body>
+		<div id="panel">
+			<input onclick="plotCAs();" type=button value="Plot CA">
+		</div>
+		
+		<div id="console">
+			<p id="line"></p>
+		</div>
+	
+		<div id="map-canvas"></div>
+	</body>
+</html>
+
+					
